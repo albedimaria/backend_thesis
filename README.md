@@ -1,2 +1,2 @@
-# master_thesis
-Feature extraction with Essentia &amp; Data visualization with Three.js
+# backend_thesis
+Complete feature extraction with Essentia

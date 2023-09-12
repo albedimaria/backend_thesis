@@ -2,7 +2,7 @@ import essentia.standard as esstd
 import os
 import json
 
-from ..backend_thesis.pathFolders import model_path
+from paths.pathsToFolders import model_path
 
 
 # mood 

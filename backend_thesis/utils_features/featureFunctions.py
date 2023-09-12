@@ -1,5 +1,14 @@
 import numpy as np
-from featureLists import sector_colors, sector_labels, tempo_ranges
+import essentia.standard as esstd
+from .featureLists import sector_colors, sector_labels, tempo_ranges 
+
+
+def load_audio(file_path):
+    """Load and resample audio from the given file path."""
+    audio_og = esstd.MonoLoader(filename=file_path, sampleRate=44100)()
+    audio = esstd.Resample(inputSampleRate=44100, outputSampleRate=16000)(audio_og)
+    cnn_audio = esstd.Resample(inputSampleRate=44100, outputSampleRate=11025)(audio)
+    return audio_og, audio, cnn_audio
 
 # given the input and list of labels, predicts the labels for the audio
 def predict_label(audio, embedding_model, classification_model, labels):

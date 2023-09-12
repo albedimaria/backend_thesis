@@ -1,7 +1,7 @@
 import essentia.standard as esstd
 import os, json
 
-from ..backend_thesis.pathFolders import model_path
+from paths.pathsToFolders import model_path
 
 
 # BPM - load pre-trained Tempo Classification model

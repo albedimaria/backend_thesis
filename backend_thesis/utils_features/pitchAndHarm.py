@@ -58,9 +58,4 @@ def extract_harmonicity_and_pitch(audio):
     else:
         pitch = round(pitch, 3)
 
-    return {
-        "pitch": pitch,
-        "pitch_confidence_pct": pitch_confidence_pct,
-        "harmonicity": harmonicity,
-        "harmonicity_pct": harmonicity_pct
-    }
+    return pitch, pitch_confidence_pct, harmonicity, harmonicity_pct

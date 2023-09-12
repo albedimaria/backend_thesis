@@ -1,0 +1,56 @@
+[
+    {
+        "file_name": "Lost and Found.wav",
+        "BPM": 120.0,
+        "BPM_2": 132.0,
+        "BPM_3": 155.0,
+        "BPM_4": 95.703125,
+        "BPM_5": 163.2069854736328,
+        "key": {
+            "estimated_key": "D",
+            "key_scale": "minor",
+            "key_strength": 0.702
+        },
+        "mood": "dark",
+        "Tempo": "moderate-fast",
+        "danceability": "28.2%",
+        "dynamic_complexity_norm": 0.192,
+        "global_loudness_dB": -20.2,
+        "valence": -0.3716,
+        "arousal": -0.2667,
+        "color": "steelblue",
+        "emotion": "depressed",
+        "timbre": "dark",
+        "instrument": "synthesizer",
+        "pitch": null,
+        "pitch confidence": "48.2%",
+        "harmonicity %": "94.4%"
+    },
+    {
+        "file_name": "Feuille Noir .wav",
+        "BPM": 120.0,
+        "BPM_2": 134.0,
+        "BPM_3": 142.0,
+        "BPM_4": 94.82511138916016,
+        "BPM_5": 94.50457000732422,
+        "key": {
+            "estimated_key": "G",
+            "key_scale": "minor",
+            "key_strength": 0.566
+        },
+        "mood": "relaxing",
+        "Tempo": "moderate-fast",
+        "danceability": "9.9%",
+        "dynamic_complexity_norm": 0.145,
+        "global_loudness_dB": -19.2,
+        "valence": -0.3687,
+        "arousal": -0.3843,
+        "color": "lightblue",
+        "emotion": "lethargic",
+        "timbre": "dark",
+        "instrument": "synthesizer",
+        "pitch": null,
+        "pitch confidence": "43.2%",
+        "harmonicity %": "96.6%"
+    }
+]

@@ -3,10 +3,66 @@ from utils_features.featureProcessing import process_audio_file
 from featureJson import create_results_json
 from paths.pathsToFolders import dir_path, json_dir
 
+from flask import Flask
+
 
 # Create an empty list to store the results for each audio file
 all_results = []
 
+app = Flask(__name__)
+
+# @app.route("/members")
+# def members(): 
+#     return {"members": ["Member1", "Member2"]} 
+
+
+
+@app.route("/process_audio")
+def process_audio():
+    
+    all_results = []
+
+    for root, dirs, files in os.walk(dir_path):
+        for file_name in files:
+            if file_name.lower().endswith('.mp3') or file_name.lower().endswith('.wav'):
+                file_path = os.path.join(root, file_name)
+                print("Loading file:", file_path)
+
+                # Process the audio file and append the results to the list
+                results = process_audio_file(file_path, file_name)
+                all_results.append(results)
+
+    return { "my results": all_results }
+
+
+if __name__ == "__main__":
+    # main()
+    app.run(debug=True)
+    
+
+    
+    
+    
+"""  json_results_path = os.path.join(json_dir, 'all_results.json')
+
+    # Save all the results to a JSON file
+    with open(json_results_path, 'w') as json_file:
+        json.dump(all_results, json_file, indent=4)
+
+    # Create a separate JSON with the explanation of the data
+    explanation = create_results_json()
+
+    json_explanation_path = os.path.join(json_dir, 'explanation.json')
+
+    # Save the explanation JSON to a separate file
+    with open(json_explanation_path, 'w') as json_file:
+        json.dump(explanation, json_file, indent=4)"""
+    
+    
+    
+    
+    
+"""
 def main():
     all_results = []
 
@@ -35,8 +91,10 @@ def main():
     with open(json_explanation_path, 'w') as json_file:
         json.dump(explanation, json_file, indent=4)
 
-if __name__ == "__main__":
-    main()
+
+
+"""
+
 
     
     

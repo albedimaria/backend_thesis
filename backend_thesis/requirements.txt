@@ -1,0 +1,4 @@
+essentia==2.1b6.dev858
+Flask==2.3.2
+numpy==1.24.2
+scipy==1.11.2
